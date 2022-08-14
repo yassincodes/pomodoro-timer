@@ -1,0 +1,23 @@
+              <option value="sound_1" >moonless</option>
+              <option value="sound_2" >I did it message</option>
+              <option value="sound_3" >so proud</option> 
+              <option value="sound_4" >slow spring board</option>
+              <option value="sound_5" >conclusive message</option>
+
+  switch (selectedSound) {
+    case (selectedSound = 1):
+      const [audio] = useState(new Audio(sound_1));
+      break;
+    case (selectedSound = 2):
+      const [audio] = useState(new Audio(sound_2));
+      break;
+    case (selectedSound = 1):
+      const [audio] = useState(new Audio(sound_3));
+      break;
+    case (selectedSound = 2):
+      const [audio] = useState(new Audio(sound_4));
+      break;
+    case (selectedSound = 2):
+      const [audio] = useState(new Audio(sound_5));
+      break;
+  }
