@@ -4,6 +4,11 @@ function Statics({setIsOpen2, other}) {
   // here I'm getting that number with .getItem("pomo")
   let pomo = localStorage.getItem("pomo")
 
+  function clearStatics() {
+    localStorage.setItem("pomo", 0)
+    window.location.reload()
+  }
+
     return (
         <div>
         <h2 style={{color:other}}>hi I'm statics</h2>
@@ -13,6 +18,7 @@ function Statics({setIsOpen2, other}) {
           <p>total number of working hours :</p>
           {pomo && (pomo *25 > 60) ? ~~((pomo * 25)/60) + " hours" + (~~((pomo * 25)/60) % 60 !== 0 ? " and " + ~~((pomo * 25))%60 + " minutes 🕖" : "") : "you didn't finish an hour yet" }
         </div>
+        <button onClick={clearStatics}>clear statics</button>
         <button className="header_buttons_settings" style={{background:other, borderColor:other, margin:"30px auto 0 auto", display:"flex", alignItems:"center"}} onClick={() => setIsOpen2(false)}>close me</button>
        
         </div>
